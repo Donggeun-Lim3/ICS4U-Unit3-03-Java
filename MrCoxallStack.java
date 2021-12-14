@@ -34,7 +34,7 @@ public class MrCoxallStack<T> {
     * @return the removed element
     * @throws EmptyStackException if the stack is empty
     */
-    public T pull() {
+    public T pop() {
         if (stackAsArray.size() == 0) {
             throw new EmptyStackException();
         }
