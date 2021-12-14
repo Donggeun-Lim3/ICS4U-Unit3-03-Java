@@ -31,7 +31,7 @@ final class StackForm {
     public static void main(final String[] args) {
 
         final MrCoxallStack<Integer> aStack = new MrCoxallStack<Integer>();
-        final String[] allowedCommands = {"add", "pull", "show", "end"};
+        final String[] allowedCommands = {"add", "pop", "show", "end"};
         final Scanner scanner = new Scanner(System.in);
 
         final String userCommand;
@@ -43,7 +43,7 @@ final class StackForm {
         final int indexTwo = 2;
         final int indexThree = 3;
 
-        System.out.println("Commands : add<number> - pull - show - end"
+        System.out.println("Commands : add<number> - pop - show - end"
                            + "\nEnter the above commands only!");
 
         while (true) {
@@ -56,7 +56,7 @@ final class StackForm {
                     aStack.push(Integer.parseInt(userCommandArray[indexOne]));
                 }
                 else if (userInput.startsWith(allowedCommands[indexOne])) {
-                    System.out.println("Removed: " + aStack.pull());
+                    System.out.println("Removed: " + aStack.pop());
                 }
                 else if (userInput.startsWith(allowedCommands[indexTwo])) {
                     aStack.showStack();
